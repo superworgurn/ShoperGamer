@@ -1,4 +1,3 @@
-/* src/index.css */
 @import "tailwindcss";
 
 :root {
@@ -6,16 +5,13 @@
   line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
-
-  color-scheme: dark;
   color: rgba(255, 255, 255, 0.92);
-  
-  /* Gradient background */
+  background-color: #050a1a;
+ 
   background: radial-gradient(circle at center, #0a0f2e 0%, #0c1a3a 30%, #0a1128 70%, #050a1a 100%);
   background-size: 200% 200%;
   animation: gradientBackground 15s ease infinite;
 
-  /* Neon color variables */
   --neon-blue: #0ff;
   --cyber-purple: #ff00ff;
   --cyber-yellow: #ffff00;
@@ -121,7 +117,6 @@ button {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Simplified scanlines */
 .scanlines {
   position: fixed;
   top: 0;
@@ -147,7 +142,6 @@ button {
   100% { background-position: 0 100%; }
 }
 
-/* Simplified grid */
 .grid-pattern {
   background-image: 
     radial-gradient(circle at center, rgba(0, 247, 255, 0.03) 0%, transparent 80%),
@@ -156,23 +150,19 @@ button {
   background-size: 100% 100%, 25px 25px, 25px 25px;
 }
 
-/* Glow text */
 .glow-text {
   color: var(--neon-blue);
   animation: neonGlow 4s infinite alternate;
 }
 
-/* Floating animation */
 .floating {
   animation: float 8s ease-in-out infinite;
 }
 
-/* Blinking animation */
 .blinking {
   animation: blink 1.5s infinite;
 }
 
-/* Fade-in animations */
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
@@ -185,7 +175,6 @@ button {
   animation: slideInRight 1s ease-out forwards;
 }
 
-/* Performance improvements */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -193,7 +182,6 @@ button {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   :root {
     font-size: 15px;
