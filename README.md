@@ -1,3 +1,5 @@
+
+
 # Shoper Gamer 🌟
 
 [![Repo Size](https://img.shields.io/github/repo-size/superworgurn/ShoperGamer?style=for-the-badge&label=Repo%20Size&color=green)](https://github.com/yourusername/shoper-gamer-portfolio)
@@ -180,6 +182,7 @@ const SocialLinkCard = ({ platform, url, icon }) => (
 
 # Shoper Gamer 🌟 (English Version)
 
+![Project Preview](https://yt3.ggpht.com/551_l7p54QgVJptmU-77P1IUFPeXUQTLa82VgyLG0soejf5zkkkQXBWLJbM1xAnC3e1ewu2OtJaxzA=s1600-rw-nd-v1)
 A high-tech cyberpunk styled Linkbio website for Shoper Gamer with modern visual effects.
 
 ## 📌 Overview
@@ -204,8 +207,15 @@ An interactive Linkbio website showcasing Shoper Gamer's work, skills, and conta
 ## 🛠️ Tech Stack
 
 ### Frontend
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Tools
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 ## 🚀 Installation & Usage
 
