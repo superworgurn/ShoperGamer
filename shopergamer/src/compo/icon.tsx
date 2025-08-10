@@ -3,20 +3,6 @@ import { FaGithub, FaYoutube, FaPinterest, FaPencilAlt } from 'react-icons/fa';
 import { FaTiktok } from 'react-icons/fa6';
 import { CgWebsite } from 'react-icons/cg';
 
-const preloadIcons = () => {
-  const icons = [
-    FaGithub, FaYoutube, FaTiktok, FaPinterest, 
-    FaPencilAlt, CgWebsite
-  ];
-  
-  icons.forEach(icon => {
-    const img = new Image();
-    img.src = 'data:image/svg+xml;base64,' + btoa(icon);
-  });
-};
-
-preloadIcons();
-
 const iconComponents = {
   github: FaGithub,
   youtube: FaYoutube,

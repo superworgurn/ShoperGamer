@@ -1,39 +1,12 @@
-import { useState, useEffect, useRef, memo, lazy, Suspense, type RefObject } from 'react';
+import { useRef, memo, lazy, Suspense, useEffect } from 'react';
 import profileData from './data';
 import Icon, { type IconName } from './compo/icon';
+import { useIntersectionObserver } from './compo/scroll';
 
 const VideoLoader = lazy(() => import('./compo/video'));
 const ParticleBackground = lazy(() => import('./compo/background'));
 const ArticleDropdownLazy = lazy(() => import('./compo/dropdown'));
 const ProjectCardLazy = lazy(() => import('./compo/projectcard'));
-
-const useIntersectionObserver = (
-  ref: RefObject<HTMLElement>,
-  options: IntersectionObserverInit = { threshold: 0.01 }
-): boolean => {
-  const [isIntersecting, setIntersecting] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current) return;
-    
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIntersecting(true);
-        observer.unobserve(entry.target);
-      }
-    }, options);
-
-    observer.observe(ref.current);
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref, options]);
-
-  return isIntersecting;
-};
 
 const SocialLinkCard = memo(({ platform, url, icon }: { platform: string, url: string, icon: IconName }) => {
   return (
@@ -70,6 +43,17 @@ const TechLinkBio = () => {
   const videoVisible = useIntersectionObserver(videoRef);
   const terminalVisible = useIntersectionObserver(terminalRef);
 
+  // Hook สำหรับซ่อน Loading Screen เมื่อแอปพร้อม
+  useEffect(() => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+      loadingScreen.classList.add('fade-out');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }
+  }, []); // ทำงานครั้งเดียว
+
   return (
     <div ref={backgroundRef} className="min-h-screen text-gray-100 py-12 px-4 grid-pattern relative overflow-hidden">
       {backgroundVisible && (
@@ -90,6 +74,7 @@ const TechLinkBio = () => {
                 alt={profileData.name}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
+                decoding="async"
                 width={192}
                 height={192}
                 fetchPriority="high"

@@ -1,15 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Shoper Gamer" />
+    <meta name="keywords" content="Shoper Gamer" />
+    <meta name="author" content="Shoper Gamer" />
+    <meta name="robots" content="Shoper Gamer" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" 
+    rel="preload" loading="lazy">
     <link rel="icon" type="image/svg+xml" href="public/logo.webp" loading="lazy" />
-    <meta name="viewport" content="Shoper Gamer" />
-     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" 
-     rel="stylesheet" loading="lazy">
     <title>Shoper Gamer</title>
   </head>
   <body>
-    <div id="root" ></div>
-    <script type="module" src="src/main.tsx" async></script>
+
+    <style>
+
+
+        #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .spinner {
+        animation: spin 1.5s linear infinite;
+      }
+      /* Fade-out animation */
+      @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+      }
+      .fade-out {
+        animation: fadeOut 0.5s ease-in-out forwards;
+      }
+    </style>
+
+      <div id="loading-screen" class="fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-1000">
+      <div class="text-center">
+        <div class="spinner border-4 border-cyan-500 border-t-transparent rounded-full w-16 h-16 mx-auto mb-4"></div>
+        <p class="text-cyan-300 font-mono text-lg">กำลังโหลด Shoper Gamer...</p>
+        <div class="mt-4 flex justify-center space-x-2">
+          <span class="blinking">_</span>
+          <span class="text-cyan-500">CONNECTING</span>
+          <span class="blinking">_</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script async type="module" src="src/main.tsx"></script>
+     <script defer>
+         window.addEventListener('DOMContentLoaded', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+
+        setTimeout(() => {
+          if (loadingScreen.style.display !== 'none') {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+              loadingScreen.style.display = 'none';
+            }, 500);
+          }
+        }, 5000);
+      });
+    </script>
+
+
   </body>
 </html>

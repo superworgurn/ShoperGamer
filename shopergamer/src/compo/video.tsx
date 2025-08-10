@@ -18,7 +18,7 @@ const VideoLoader = () => {
         <div className="rounded-xl bg-gray-100 p-4 shadow-lg w-full">
           <iframe
             className="w-full h-120"
-            src="https://www.youtube-nocookie.com/embed/videoseries?si=Zpn9KMacp5RktO4x&amp;list=PL6475yVcKBeKWCb70dAPu2Uxd7_VY7nw9"
+            src="https://www.youtube.com/embed/videoseries?si=Zpn9KMacp5RktO4x&amp;list=PL6475yVcKBeKWCb70dAPu2Uxd7_VY7nw9"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             loading="lazy"

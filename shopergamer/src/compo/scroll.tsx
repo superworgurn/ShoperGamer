@@ -1,8 +1,8 @@
 import { useState, useEffect, type RefObject } from 'react';
 
 export const useIntersectionObserver = (
-  ref: RefObject<HTMLElement>,
-  options: IntersectionObserverInit = { threshold: 0.1 }
+  ref: RefObject<HTMLElement | null>,
+  options: IntersectionObserverInit = { threshold: 0.1, rootMargin: '200px 0px' }
 ): boolean => {
   const [isIntersecting, setIntersecting] = useState(false);
 
