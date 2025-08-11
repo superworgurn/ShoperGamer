@@ -41,8 +41,8 @@
 
 1. **โคลนโปรเจกต์**:
 ```bash
-git clone [https://github.com/yourusername/shoper-gamer-portfolio.git](https://github.com/yourusername/shoper-gamer-portfolio.git)
-cd shoper-gamer-portfolio
+git clone https://github.com/superworgurn/ShoperGamer.git
+cd shopergamer
 
 ```
 
@@ -225,8 +225,8 @@ An interactive Linkbio website showcasing Shoper Gamer's work, skills, and conta
 Bash
 
 ```
-git clone [https://github.com/yourusername/shoper-gamer-portfolio.git](https://github.com/yourusername/shoper-gamer-portfolio.git)
-cd shoper-gamer-portfolio
+git clone https://github.com/superworgurn/ShoperGamer.git
+cd shopergamer
 
 ```
 
