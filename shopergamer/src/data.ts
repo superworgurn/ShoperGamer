@@ -10,9 +10,9 @@ links: [
   { id: 3, platform: "Shoper Gamer", url: "https://bsky.app/profile/shopergamer.bsky.social", icon: "bluesky" },
   { id: 4, platform: "Shoper Gamer", url: "https://www.blockdit.com/shoper.gamer", icon: "blockdit" },
   { id: 5, platform: "Shoper Gamer", url: "https://www.youtube.com/@ShoperGamer", icon: "youtube" },
-  { id: 6, platform: "Shoper Gamer (สำรอง)", url: "https://www.youtube.com/channel/UCv2-ttx2XPGMGCzb3sV2lzQ", icon: "youtube" },
+  { id: 6, platform: "ST Showcase", url: "https://www.youtube.com/channel/UCv2-ttx2XPGMGCzb3sV2lzQ", icon: "youtube" },
   { id: 7, platform: "Shoper Gamer", url: "https://pin.it/1WDGCrD6U", icon: "pinterest" },
-  { id: 8, platform: "Shoper Team", url: "https://linkbio.co/shoperteam", icon: "website" },
+  { id: 8, platform: "Shoper Team", url: "https://shoperteam.vercel.app/", icon: "website" },
 ],
   articles: [
     {
@@ -141,6 +141,11 @@ links: [
           title: "Ai By Shoper Gamer",
           content: "https://www.blockdit.com/series/66a9188d81d15b54232aaadd"
         },
+        {
+          id: 2,
+          title: "Ai Automation By Shoper Gamer",
+          content: "https://www.blockdit.com/series/698711cedf0cc69ffb53d481"
+        },
       ]
     },
 
@@ -153,7 +158,18 @@ links: [
           title: "Data By Shoper Gamer",
           content: "https://www.blockdit.com/series/66acefae1ba3d8894da6de9c"
         },
+        {
+          id: 2,
+          title: "SQL By Shoper Gamer",
+          content: "https://www.blockdit.com/series/689c8865ea085fef98e67977"
+        },
+        {
+          id: 3,
+          title: "NoSQL By Shoper Gamer",
+          content: "https://www.blockdit.com/series/689c9727a2fec0801b7308b2"
+        },
       ]
+      
     },
 
     {
@@ -189,8 +205,18 @@ links: [
         },
         {
           id: 2,
-          title: "กฎหมาย IT",
+          title: "กฎหมายสำหรับ IT",
           content: "https://www.blockdit.com/series/6762724a5250d83a2d3ee9df"
+        },
+        {
+          id: 3,
+          title: "คำศัพท์พื้นฐานสำหรับ IT",
+          content: "https://www.blockdit.com/series/6530a1f2da36fdf70597dfd4"
+        },
+        {
+          id: 4,
+          title: "Study Next",
+          content: "https://www.blockdit.com/series/680b44a67a31cf513ae9ef3f"
         },
       ]
     },

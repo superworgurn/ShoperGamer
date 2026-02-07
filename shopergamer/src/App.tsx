@@ -172,7 +172,16 @@ const TechLinkBio = () => {
             )}
           </div>
 
-          <div ref={projectsRef} className="grid mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* ปรับปรุงส่วน Projects: ใช้ Flex+Overflow บนมือถือ และ Grid บน Desktop */}
+          <div 
+            ref={projectsRef} 
+            className="
+              mt-20 
+              flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory 
+              md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0
+              scrollbar-thin
+            "
+          >
             {projectsVisible ? (
               <Suspense fallback={
                 <div className="text-center col-span-3 py-10 text-cyan-300">
@@ -182,7 +191,11 @@ const TechLinkBio = () => {
                 {profileData.projects.map((project, index) => (
                   <div
                     key={project.id}
-                    className="transition-all duration-700"
+                    className="
+                      min-w-[85vw] sm:min-w-[350px] md:min-w-0 
+                      snap-center 
+                      transition-all duration-700
+                    "
                     style={{
                       opacity: 1,
                       transform: 'translateY(0)',

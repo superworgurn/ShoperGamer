@@ -360,7 +360,7 @@ The website is fully responsive across all devices:
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE)
+This project is licensed under the [GPL-3.0 license](https://www.google.com/search?q=gpl-3.0+license)
 
 
 

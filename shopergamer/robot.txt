@@ -1,0 +1,5 @@
+# Simple Image Converter Robots.txt
+# Website: shopergamer.vercel.app/
+
+User-agent: *
+Allow: /
